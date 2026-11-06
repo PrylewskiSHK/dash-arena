@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1026" />
+  <title>Dash Arena</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='34' r='26' fill='%23ff4d6d' stroke='%23801b30' stroke-width='4'/%3E%3Cellipse cx='40' cy='28' rx='6' ry='7' fill='white'/%3E%3Cellipse cx='24' cy='28' rx='6' ry='7' fill='white'/%3E%3Ccircle cx='42' cy='29' r='3.5' fill='%231a1a2e'/%3E%3Ccircle cx='26' cy='29' r='3.5' fill='%231a1a2e'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="hud" class="hidden">
+    <div id="killfeed"></div>
+    <div id="board"></div>
+    <div id="me">
+      <div id="myScore">0</div>
+      <small>PUNKTE</small>
+      <div id="myStreak"></div>
+    </div>
+    <div id="banner"></div>
+    <div id="center"></div>
+    <div id="hint"></div>
+    <div id="ping"></div>
+    <button id="mute" title="Ton an/aus (M)">🔊</button>
+    <button id="music" title="Musik an/aus (N)">🎵</button>
+  </div>
+
+  <div id="touch" class="hidden">
+    <div id="stick"><div id="knob"></div></div>
+    <div id="dashBtn"><span>DASH</span><div id="dashFill"></div></div>
+  </div>
+
+  <div id="menu">
+    <div class="card">
+      <h1>DASH<span>ARENA</span></h1>
+      <p class="tag">Schubs alle von der Eisfläche!</p>
+      <input id="name" maxlength="14" placeholder="Dein Name" autocomplete="off" spellcheck="false" />
+      <div id="colors"></div>
+      <button id="play">SPIELEN</button>
+      <div class="help desktop">
+        <div><b>WASD / Pfeile</b> bewegen</div>
+        <div><b>Leertaste / Maus</b> halten = aufladen, loslassen = <b>DASH</b></div>
+      </div>
+      <div class="help mobile">
+        <div><b>Linke Seite</b> wischen = bewegen</div>
+        <div><b>Rechte Seite</b> halten = aufladen, loslassen = <b>DASH</b></div>
+      </div>
+      <div class="help small">
+        Wer dich zuletzt getroffen hat, bekommt den Punkt. 👑 Wer die Krone runterwirft, kassiert +3.
+      </div>
+      <div id="record"></div>
+      <div id="online"></div>
+      <div id="status"></div>
+    </div>
+  </div>
+
+  <script src="audio.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>

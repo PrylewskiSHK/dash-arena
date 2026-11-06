@@ -1,0 +1,16 @@
+{
+  "name": "dash-arena",
+  "version": "1.0.0",
+  "description": "Mini-Multiplayer im Browser: Schubs alle von der Eisfläche!",
+  "main": "server/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
